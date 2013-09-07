@@ -41,8 +41,13 @@ def all_possibilities(filename, scrabble_letters, min_num_letters, total_word_le
 
 
 if __name__ == '__main__':
+    lmin = 5
+    lmax = 9
     scrabble_letters = 'catapult'
     scrabble_sig = signature(scrabble_letters)
-    d = all_possibilities('words.txt', scrabble_sig, 5, 9)
-    print d
- 
+    options_list = all_possibilities('words.txt', scrabble_sig, lmin,lmax)
+    print "You have the letters" + scrabble_letters + "in your tray."
+    print "You need to use" + str(lmin) + "letters from your tray"
+    print "You can only use" + str(lmax) + "letters total"
+    print "Your options are: "
+    print options_list
